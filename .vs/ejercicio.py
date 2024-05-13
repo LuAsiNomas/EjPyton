@@ -112,10 +112,59 @@ def ejercicio7():
 
     print("El promedio de los 7 numeros es: ", promedio)
 
-ejercicio7()
 
-def ejercicio8()
+def ejercicio8():
 
-    
+    total = int(input("Inserte el número entero: "))
+    parte = int(input("Escriba una fracción del número total: "))
+    Aux = parte / total
+    fracción = Aux * 100
 
-ejercicio8()
+    if parte>total:
+        print("El número menor que introdujo es mayor al número total")
+    else:
+        print(parte, " Es ", fracción, "% de ", total)
+
+
+def ejercicio9():
+
+    fecha = input("Ingrese la fecha usando 2 digitos pada dia y mes, y 4 para el año (DDMMAAA).")
+    dia = fecha [0]+ fecha [1]
+    mes = fecha [2]+ fecha [3]
+    año = fecha [4]+ fecha [5]+ fecha [6]+ fecha [7]
+
+    if len(fecha) > 8:
+        print("El valor ingresado es incorrecto")
+    else:
+        print("Usted ingresó el día", dia, "mes", mes, "del año", año)
+
+
+def ejercicio10():
+
+    examenes = int(input("Nota de los examenes: ")) * 0.3
+    tps = int(input("Nota de los trabajos prácticos: ")) * 0.2
+    examenint = int(input("Nota del examen integrador: ")) * 0.5
+    total = examenes + examenint + tps
+
+    print("La nota total es: ", total)
+
+
+
+def ejercicio11():
+
+    autos = []
+    inputUser = ""
+    while inputUser != "SALIR":
+        inputUser = input("ingrese el valor del auto vendido o SALIR")
+        if inputUser != "SALIR":
+            inputUser = float(inputUser)
+            autos.append(inputUser)
+
+    AUx = sum(autos)
+    comision = AUx * 0.05
+    salario = len(autos) * 200
+    cobrar = 5500 + salario + comision
+
+    print("el salario es de ", cobrar, " pesos.")
+
+ejercicio11()
